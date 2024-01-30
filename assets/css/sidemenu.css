@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.naviagation {
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+}
+
+.naviagation > a > li {
+    text-decoration: none !important;
+    color : #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.naviagation > a {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.naviagation > a:hover > li {
+    background: linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 255, 255)) !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.naviagation > a:hover > li {
+    color: #fff !important;
+}
+
+.naviagation > .active > li {
+    background: linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 255, 255));
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+}
+
+.naviagation > .active {
+    color: #fff !important;
+}
+
+.hide {
+    display: none;
+}
+
+#dropdown-list {
+    padding-left: 0px;
+    list-style: none;
+}
+
+#dropdown-list > a {
+    text-decoration: none;
+    color: #000;
+}
+
+#dropdown-list > a > li:hover {
+    background: linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 255, 255));
+    color: #fff;
+}
+
+#dropdown-list > a > .active {
+    background: linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 255, 255));
+    color: #fff;
+}
+
+#dropdown-list > a > li {
+    margin-top: 5px;
+    margin-left: 30px;
+    padding: 5px;
+}
