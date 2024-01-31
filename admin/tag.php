@@ -1,15 +1,21 @@
 <?php
 include "../include/header.php";
 // API News URL
-$api_url = 'https://newsapi.org/v2/top-headlines?country=id&category=technology&apiKey=e1c7f6efec974dddb22076143d05bfe8';
+$api_url = 'https://newsapi.org/v2/top-headlines?country=id&category=technology&apiKey=bc7820fe7ae943b39399c643f778f191';
 
 // Mendapatkan data dari API News
+try{
+    sleep(3);
 $response = file_get_contents($api_url);
 
 // Jika mendapatkan data, lanjutkan
 if ($response !== false) {
     // Konversi respons JSON ke bentuk array
     $data = json_decode($response, true);
+        if($data['status'] == 'error') {
+        echo $data['message'];
+        exit;
+    }
     //var_dump($data);
     // Mendapatkan teks berita untuk awan kata (contoh mengambil judul berita)
     $news_text = '';
@@ -26,4 +32,8 @@ if ($response !== false) {
     include 'wordcloud.php';
 } else {
     echo 'Gagal mendapatkan data dari API News.';
+}
+
+} catch(Exception $e) {
+    echo "An error occurred: " . $e->getMessage();
 }
